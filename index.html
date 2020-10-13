@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/geral.css">
+  <script src="js/site.js"></script>
+  <title>Gerador de Recibo</title>
+  <script type="text/javascript" src="js/jspdf.min.js"></script>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="row box mx-auto">
+      
+      <div class="mx-auto conteudoDiv" >
+        <div class="cabeca mt-5 " style="text-align: center;">
+          <h1 class="title">Gerador de Recibo:</h1>
+          <p>Preencha conforme a sugestão do próprio campo para melhores resultados!
+          </p> <br> 
+        </div>
+        
+        <form class="formulario col-6 mx-auto">
+          <div class="form-row">
+            <div class="form-group col-6">
+              <label>Nome do Banco Destinatário</label> 
+              <input id="nomeBanco" class="form-control input" placeholder="Nome do banco" type="text" required/>
+            </div>
+            <div class="form-group col-6">
+              <label>Número do Recibo</label>
+              <input id="numeroRecibo" class="form-control input" placeholder="Número do Recibo" type="number" required/>
+            </div>
+          </div>
+          <div class="form-group" style="margin-top: 0px;">
+            <label>Nome do Beneficiário</label>		
+            <input id="nomeBeneficiario" class="form-control input" placeholder="Nome do Beneficiário" type="text" required/>
+          </div>
+          <div class="form-group" style="margin-top: 0px;">
+            <label>Razão Social</label>		
+            <input id="razao" class="form-control input" placeholder="Razão Social" type="text" required/>
+          </div>
+          <div class="form-group">
+            <label>CPF/CNPJ do Beneficiário</label>
+            <input id="cpfBeneficiario" class="form-control input" placeholder="CPF / CNPJ do Beneficiário" type="text" required/>
+          </div>
+          <div class="form-group">
+            <label>Nome do Pagador</label>
+            <input id="pagador" class="form-control input" placeholder="Nome do Pagador" type="text" required/>
+          </div>
+          <div class="form-group">
+            <label>CPF/CNPJ do Pagador</label>
+            <input id="cpfPagador" class="form-control input" placeholder="CNPJ do Pagador" type="text" required/>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-6">
+              <label>Data de Emissão</label>
+              <input id="dataVencimento" class="form-control input" placeholder="Data: 16 de Setembro de 2016" type="date" required/>
+            </div>
+            <div class="form-group col-6">
+              <label>Data de Vencimento</label>
+              <input id="dataPagamento" class="form-control input" placeholder="Data: 16 de Setembro de 2016" type="date" required/>
+            </div>
+            <div class="form-group col-6">
+              <label>Valor</label> 
+              <input id="valor" class="form-control input" placeholder="Valor sem os centavos" type="number" value="0.00" required/>
+            </div>
+            <div class="form-group col-6">
+              <label>Desconto</label> 
+              <input id="desconto" class="form-control input" placeholder="Valor sem os centavos" type="number" value="0.00" required/>
+            </div>
+            <div class="form-group col-6">
+              <label>Abatimento</label> 
+              <input id="abatimento" class="form-control input" placeholder="Valor sem os centavos" type="number" value="0.00" required/>
+            </div>
+            <div class="form-group col-6">
+              <label>Bonificação</label> 
+              <input id="bonificacao" class="form-control input" placeholder="Valor sem os centavos" type="number" value="0.00" required/>
+            </div>
+            <div class="form-group col-6">
+              <label>Multa</label> 
+              <input id="multa" class="form-control input" placeholder="Valor sem os centavos" type="number" value="0.00" required/>
+            </div>
+            <div class="form-group col-6">
+              <label>Juros</label> 
+              <input id="juros" class="form-control input" placeholder="Valor sem os centavos" type="number" value="0.00" required/>
+            </div>
+          </div>  
+          <div class="form-group" style="margin-top: 0px;">
+            <label>Total a Pagar</label> 
+            <input id="valorTotal" class="form-control input" placeholder="Valor sem os centavos" type="number" value="0.00" required/>
+          </div>  
+          <div class="form-group">
+            <label>Descrição do Pagamento</label>
+            <input id="descricao" class="form-control input" placeholder="Descrição do Pagamento" type="text"/>
+          </div>
+          <div class="mt-4" style="text-align: center;">
+            <button block id="enviar" onclick="chama()" type="submit" class="btn btn-link btn-primary mx-auto">CRIAR RECIBO</button>
+          </div>
+        </form>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  <footer class="container col-12 mt-5">
+    <div class="row">
+      <div class="text-center font-110-percent mt-3 col-12" style="color: white;">
+        <h3 class="col-12">DESENVOLVEDORES</h3>
+        <div class="row">
+          <p class="col-12 col-md-6 text-center">Francisca Natália Simões</p>
+          <p class="col-12 col-md-6 text-center">Francisco Joalison Galvão</p>      
+          <p class="col-12 col-md-6 text-center">fnatalias@hotmail.com</p>
+          <p class="col-12 col-md-6 text-center">galvaoj190@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* mudando cor da fonte */
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.formulario > div {
+    margin-top: 15px;
+}
+
+/* edição do rodapé */
+footer{
+    height: 150px;
+    background-color: black;
+}
+
+/* edição dos inputs do formulário */
+.input{ 
+    border: 1px solid rgb(255, 0, 0);
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.input:hover { 
+    border-color: black;
+    background-color: transparent;
+}
+
+.input:active, input:focus {
+    border: 1px solid black;
+    box-shadow: 0 0 0 0;
+    background-color: transparent;
+
+}
+
+/* edição do botao de enviar o formulário*/
+.btn-link{
+    color: white;
+    width: 50%;
+    background-color: rgb(226, 40, 40);
+    border: 1px solid black;
+}
+
+.btn-link:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(255, 0, 0);
+    border: 1px solid black;
+}
