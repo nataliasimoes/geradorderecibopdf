@@ -7,4 +7,4 @@ Para a executar, basta abrir o arquivo index.html em algum navegador.
 ![segunda parte](https://user-images.githubusercontent.com/72634787/96047791-03dc3a80-0e4c-11eb-94ec-38b3af5e7830.PNG)
 
 ## PDF já feito em outra aba
-![recibo pronto](https://user-images.githubusercontent.com/72634787/96047410-74cf2280-0e4b-11eb-83b6-35bd68104bfa.PNG)
+![recibofinal](https://user-images.githubusercontent.com/72634787/96058244-1d3bb180-0e61-11eb-8322-1b6d435238aa.PNG)
