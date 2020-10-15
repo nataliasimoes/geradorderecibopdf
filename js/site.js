@@ -91,19 +91,21 @@ function chama() {
     pdf.text(110, 105, "Desconto:"+desconto+ "R$");
     pdf.text(35, 110, "Abatimento:"+abatimento+ "R$");
     pdf.text(110, 110, "Bonificação:"+bonificacao+ "R$");
-    pdf.text(35, 115, "________________________________________________________________________");
+    pdf.text(35, 115, "Juros:"+juros+ "R$");
+    pdf.text(110, 115, "Multa:"+multa+ "R$");
+    pdf.text(35, 120, "________________________________________________________________________");
     
     pdf.setFontSize(12);
-    pdf.text(87, 125, "Valor total: "+valorTotal+"R$");
+    pdf.text(87, 130, "Valor total: "+valorTotal+"R$");
     
     pdf.setFontSize(10);
-    pdf.text(35, 135, "________________________________________________________________________");
+    pdf.text(35, 140, "________________________________________________________________________");
     
-    pdf.text(35, 140, "Descrição: "+descricao );
+    pdf.text(35, 145, "Descrição: "+descricao );
     
     pdf.setFontSize(8);
-    pdf.text(75, 145, "Banco Central do Brasil estabelece o prazo de");
-    pdf.text(70, 150, "3 dias úteis para compensar o boleto de pagamento.");
+    pdf.text(75, 150, "Banco Central do Brasil estabelece o prazo de");
+    pdf.text(70, 155, "3 dias úteis para compensar o boleto de pagamento.");
     
     
     // pdf.save('recibo_'+numeRecibo+'_'+pagador+'.pdf');
