@@ -66,46 +66,46 @@ function chama() {
     
     pdf.setFontSize(18); //Tamanho da fonte
     pdf.setTextColor(150); // cor da fonte cinza claro
-    pdf.text(92, 40, "n° "+numeRecibo);
+    pdf.text(92, 35, "n° "+numeRecibo);
     
     pdf.setTextColor(0); // cor da fonte preto
     pdf.setFont("helvetica");
     pdf.setFontSize(10);
-    pdf.text(35, 55, "Beneficiário: "+nomeBene);
-    pdf.text(35, 60, "CPF/CNPJ: "+cpfBene);
-    pdf.text(35, 65, "Razão social: "+razao)
-    pdf.text(35, 70, 'Banco: '+nomeBanco);
-    pdf.text(35, 75, "________________________________________________________________________");
+    pdf.text(35, 45, "Beneficiário: "+nomeBene);
+    pdf.text(35, 50, "CPF/CNPJ: "+cpfBene);
+    pdf.text(35, 55, "Razão social: "+razao)
+    pdf.text(35, 60, 'Banco: '+nomeBanco);
+    pdf.text(35, 65, "________________________________________________________________________");
     
-    pdf.text(35, 80, 'Pagador: '+pagador);
-    pdf.text(35, 85, "CPF/CNPJ: "+cpfPagador);
+    pdf.text(35, 70, 'Pagador: '+pagador);
+    pdf.text(35, 75, "CPF/CNPJ: "+cpfPagador);
     
     
+    pdf.text(35, 80, "________________________________________________________________________");
+    
+    pdf.text(35, 85, 'Data de emissão: '+datP);
+    pdf.text(110, 85, 'Data de validade: '+datV);
     pdf.text(35, 90, "________________________________________________________________________");
     
-    pdf.text(35, 95, 'Data de emissão: '+datP);
-    pdf.text(110, 95, 'Data de validade: '+datV);
-    pdf.text(35, 100, "________________________________________________________________________");
-    
-    pdf.text(35, 105, "Valor:"+valor+ "R$");
-    pdf.text(110, 105, "Desconto:"+desconto+ "R$");
-    pdf.text(35, 110, "Abatimento:"+abatimento+ "R$");
-    pdf.text(110, 110, "Bonificação:"+bonificacao+ "R$");
-    pdf.text(35, 115, "Juros:"+juros+ "R$");
-    pdf.text(110, 115, "Multa:"+multa+ "R$");
-    pdf.text(35, 120, "________________________________________________________________________");
+    pdf.text(35, 95, "Valor: "+valor+ "R$");
+    pdf.text(110, 95, "Desconto:"+desconto+ "R$");
+    pdf.text(35, 100, "Abatimento:"+abatimento+ "R$");
+    pdf.text(110, 100, "Bonificação:"+bonificacao+ "R$");
+    pdf.text(35, 105, "Juros:"+juros+ "R$");
+    pdf.text(110, 105, "Multa:"+multa+ "R$");
+    pdf.text(35, 110, "________________________________________________________________________");
     
     pdf.setFontSize(12);
-    pdf.text(87, 130, "Valor total: "+valorTotal+"R$");
+    pdf.text(87, 120, "Valor total: "+valorTotal+"R$");
     
     pdf.setFontSize(10);
-    pdf.text(35, 140, "________________________________________________________________________");
+    pdf.text(35, 125, "________________________________________________________________________");
     
-    pdf.text(35, 145, "Descrição: "+descricao );
+    pdf.text(35, 130, "Descrição: "+descricao );
     
     pdf.setFontSize(8);
-    pdf.text(75, 150, "Banco Central do Brasil estabelece o prazo de");
-    pdf.text(70, 155, "3 dias úteis para compensar o boleto de pagamento.");
+    pdf.text(75, 135, "Banco Central do Brasil estabelece o prazo de");
+    pdf.text(70, 140, "3 dias úteis para compensar o boleto de pagamento.");
     
     
     // pdf.save('recibo_'+numeRecibo+'_'+pagador+'.pdf');
